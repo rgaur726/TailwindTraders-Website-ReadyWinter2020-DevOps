@@ -13,7 +13,7 @@ class UploadFile extends Component {
     }
 
     uploadFile(e) {
-
+ 
         const file = e.target.files[0];
         const formData = new FormData();
         formData.append("file", file);
@@ -22,7 +22,7 @@ class UploadFile extends Component {
             .then((relatedProducts) => {
                 if (relatedProducts.length > 1) {
                     this.props.history.push({
-                        pathname: "/suggested-products-list",
+                        pathname: "/suggested-products-list" ,
                         state: { relatedProducts },
                     });
                 }else {
